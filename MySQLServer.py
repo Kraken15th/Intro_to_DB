@@ -14,9 +14,9 @@ def create_database(database_name):
             password="your_password"
         )
         mycursor = mydb.cursor()
-        mycursor.execute(f"CREATE DATABASE IF NOT EXISTS {database_name}")
+        mycursor.execute(f"CREATE DATABASE IF NOT EXISTS alx_book_store")
         mydb.commit()
-        print(f"Database '{database_name}' created successfully!")
+        print(f"Database alx_book_store created successfully!")
         return True
     except mysql.connector.Error as error:
         print(f"Error creating database: {error}")
@@ -26,5 +26,4 @@ def create_database(database_name):
         mydb.close()
 
 if __name__ == "__main__":
-    database_name = "alx_book_store"
-    success = create_database(database_name)
+    success = create_database('alx_book_store')
